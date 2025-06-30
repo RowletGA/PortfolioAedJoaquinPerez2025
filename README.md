@@ -18,6 +18,6 @@ Así mismo se puede encontrar la reflexion de cada unidad y post a los parciales
 9. [Parcial 1](./JOAQUIN-PEREZ/Parcial1/README.md)
 10. [Parcial 2](./JOAQUIN-PEREZ/Parcial2/README.md)
 
-### 
+### ª
 ![EstadoMental](./JOAQUIN-PEREZ/recursos/ayuda.jpg)
 
