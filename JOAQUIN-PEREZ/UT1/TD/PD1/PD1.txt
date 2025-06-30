@@ -1,0 +1,72 @@
+EJERCICIO 1
+Dado el siguiente programa:
+public static void zoop () {
+baffle ();
+System.out.print ("Vos zacata ");
+baffle ();
+}
+public static void main (String[] args) {
+System.out.print ("No, yo ");
+zoop ();
+System.out.print ("Yo ");
+baffle ();
+}
+public static void baffle () {
+System.out.print ("pac");
+ping ();
+}
+public static void ping () {
+System.out.println (".");
+}
+¿Cuál es la salida? Sé preciso acerca de dónde hay espacios y dónde hay nuevas líneas.
+Indicar cuál es la respuesta más correcta: (\n denota nueva línea)
+
+##########################3
+Respuesta
+##########################
+No, yo pac.
+Vos zacata pac.
+Yo pac.
+##########################
+
+EJERCICIO 2
+public class Zumbido {
+	public static void desconcertar (String dirigible) {
+		System.out.println (dirigible); //6
+		sipo ("ping", -5);//7
+	}
+	public static void sipo (String membrillo, int flag) {
+		if (flag < 0) { //2 ,8
+			System.out.println (membrillo + " sup"); //9
+		} else { //3
+			System.out.println ("ik"); //4
+			desconcertar (membrillo); //5
+			System.out.println ("muaa-ja-ja-ja");//10
+		}
+	}
+	public static void main (String[] args) {
+		sipo ("traqueteo", 13); //1
+	}
+}
+
+a) ¿Cuál es la primera sentencia que se ejecuta? 
+Respuesta
+####################
+sipo ("traqueteo", 13); sigue if (flag< 0) 
+###################
+b) Escribir número 2 al lado de la segunda sentencia, un 3 al lado de la que se ejecuta en
+tercer lugar, y así siguiendo hasta el final del programa. Si una sentencia se ejecuta más
+de una vez, puede que termine con más de un número al lado.
+PARTE 2 (con computadora) 
+##################
+En el codigo
+##################
+EJERCICIO 3
+Muchos cálculos pueden ser expresados de manera concisa usando la operación “multsuma”,
+que toma tres operandos y computa a*b + c. Algunos procesadores incluso proveen una
+implementación de hardware para esta operación para números de punto flotante.
+Crear un nuevo programa llamado Multsuma.java. Escribir un método llamado multsuma que
+toma tres doubles como parámetros y que imprime el resultado de multisumarlo.
+Escribir un método main que testee multsuma invocándolo con unos pocos parámetros
+simples, como por ejemplo 1.0, 2.0, 3.0, y después imprima por consola el resultado, que en
+ese caso debería ser 5.0.
