@@ -7,6 +7,6 @@
 ## Contenido
 
 - [Metodos](./MetodosPractica)
-- [Reflexion Post Parcial](./RP)
+- [Reflexion Post Parcial](../RP.md)
 
 
