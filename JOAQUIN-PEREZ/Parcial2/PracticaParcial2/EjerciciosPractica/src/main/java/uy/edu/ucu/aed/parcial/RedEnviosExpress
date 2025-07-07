@@ -1,0 +1,65 @@
+package uy.edu.ucu.aed.parcial;
+
+import uy.edu.ucu.aed.tda.Ciudad;
+import uy.edu.ucu.aed.tda.Ruta;
+import uy.edu.ucu.aed.tda.TGrafoNoDirigido;
+
+import java.util.*;
+
+public class RedEnviosExpress extends TGrafoNoDirigido {
+
+    public RedEnviosExpress() {
+        super(new ArrayList<>(), new ArrayList<>());
+    }
+
+    public Map<Comparable, Double> dijkstraDesde(Comparable origen) {
+        Map<Comparable, Double> distancias = new HashMap<>();
+        Map<Comparable, Comparable> anteriores = new HashMap<>();
+
+        for (Comparable etiqueta : getVertices().keySet()) {
+            distancias.put(etiqueta, Double.POSITIVE_INFINITY);
+            anteriores.put(etiqueta, null);
+        }
+
+        distancias.put(origen, 0.0);
+
+        // Cola de prioridad con comparador por distancia mínima
+        PriorityQueue<Comparable> cola = new PriorityQueue<>(Comparator.comparingDouble(distancias::get));
+        cola.addAll(getVertices().keySet());
+
+        while (!cola.isEmpty()) {
+            Comparable actual = cola.poll();
+
+            for (Ruta r : getLasAristas()) {
+                Comparable u = r.getEtiquetaOrigen();
+                Comparable v = r.getEtiquetaDestino();
+
+                if (u.equals(actual) && cola.contains(v)) {
+                    double nuevoCosto = distancias.get(u) + r.getCosto();
+                    if (nuevoCosto < distancias.get(v)) {
+                        distancias.put(v, nuevoCosto);
+                        anteriores.put(v, u);
+                        // Reinsertar v para actualizar la prioridad
+                        cola.remove(v);
+                        cola.add(v);
+                    }
+                } else if (v.equals(actual) && cola.contains(u)) {
+                    double nuevoCosto = distancias.get(v) + r.getCosto();
+                    if (nuevoCosto < distancias.get(u)) {
+                        distancias.put(u, nuevoCosto);
+                        anteriores.put(u, v);
+                        cola.remove(u);
+                        cola.add(u);
+                    }
+                }
+            }
+        }
+
+        return distancias;
+    }
+
+    public Map<Comparable, Comparable> obtenerCaminos(Comparable origen) {
+        // Se puede implementar luego si querés mostrar el camino completo.
+        throw new UnsupportedOperationException("No implementado aún.");
+    }
+}
