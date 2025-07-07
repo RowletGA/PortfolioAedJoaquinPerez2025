@@ -6,5 +6,5 @@ Además de los del parcial.
 
 ## Contenido
 
-1. [Practica Parcial](./PracticaParcial1/README.md)
+1. [Practica Parcial](./PracticaParcial2/README.md)
 2. [Reflexion fin de unidad](./RP.md)
