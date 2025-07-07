@@ -14,7 +14,7 @@ Así mismo se puede encontrar la reflexion de cada unidad y post a los parciales
 5. [UT6 - Diccionarios, Mapas y colecciones ](./JOAQUIN-PEREZ/UT6/README.md)
 6. [UT7 - Grafos Dirigidos](./JOAQUIN-PEREZ/UT7/README.md)
 7. [UT8 - Grafos No Dirigidos](./JOAQUIN-PEREZ/UT8/README.md)
-8. [UT9 - Grafos No Dirigidos](./JOAQUIN-PEREZ/UT9/README.md)
+8. [UT9 - Ordenación](./JOAQUIN-PEREZ/UT9/README.md)
 9. [Parcial 1](./JOAQUIN-PEREZ/Parcial1/README.md)
 10. [Parcial 2](./JOAQUIN-PEREZ/Parcial2/README.md)
 
